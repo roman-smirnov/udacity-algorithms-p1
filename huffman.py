@@ -62,14 +62,6 @@ def build_huffman_dict(huffman_tree_root):
     return huffman_dict
 
 
-# lookup table has all codes of same length == max length
-# lookup table also has number of stream bits to consume after decoding symbol
-# lookup table also has all variations of a symbol suffix (e.g 010: 0100 and 0101
-# def build_lookup_table(huffman_tree_root):
-#     lookup_dict = dict()
-#     build_huffman_dict_helper(huffman_tree_root, lookup_dict)
-#     return lookup_dict
-
 def encode_message(message, dictionary):
     huffman_code = ''
     for symbol in message:
